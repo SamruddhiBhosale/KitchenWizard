@@ -59,7 +59,7 @@ def login():
 
         with create_connection() as connection:
             with connection.cursor() as cursor:
-                # Check if the user exists in the 'user' table
+                
                 select_query = "SELECT * FROM user WHERE email = %s"
                 cursor.execute(select_query, (email,))
                 user = cursor.fetchone()
